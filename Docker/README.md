@@ -173,3 +173,58 @@ RUN mkdir -p /home/app
 COPY . /home/app # executes on the HOST machine
 CMD ["node", "server.js"] # cmd command
 ```
+
+To actually build
+```sh
+docker build -t my-app:1.0 . # (.) for current folder which contains Dockerfile
+```
+
+:red_circle: when you readjust the `Dockerfile` you've to rebuild the image
+
+```sh
+docker rm <container_name> # notice sometimes you should first delete the container, then delete the image; otherwise it wouldn't go right
+docker rmi <image_name> # my-app:1.0 here
+```
+
+## Docker Volumes
+- When do we need Docker volumes?
+
+
+Virutal File Systems
+
+Host File system 
+Folder in physical host file system is *mounted* into virual file system of Docker
+
+Data gets automatically replicated from/to virtual and host
+<insert image>
+
+### 3 volumes types
+using Docker run command:
+Host Volumes
+anonymous volumes
+named volumes: you can reference the volume by name
+1. `docker run -v <host_dir>:<vf_dir>`
+for example
+```sh
+docker run -v /home/mount/data:/var/lib/mysql/data
+```
+
+2. `docker run -v <only_vf_dir>`
+and Dockre automaticallyfor each container create/generate a folder that gets mounted e.g `/var/lib/docker/volumes/random-hash/_data`
+3. `docker run -v name:/var/lib/mysql/data`
+
+* named volumes is commonly used on production
+
+using Docker compose
+```yaml
+version:
+services:
+  <service>:
+      image: <image_name>
+      ports: <ports>
+      volumes:
+       - db-data:/var/lib/mysql/data # named volume
+volumes:
+  db-data # you must list those volumes
+```
+You can referene one volume for more than one containers
