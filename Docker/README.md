@@ -15,7 +15,7 @@
 11. Deploy and setup nexus as Docker container
 12. Create private docker repository on nexus
 13. push/fetch from repo
-
+14. Beyond Docker: Containerization in practice!
 ## Resources
 
 - Frontendmasters - complete introduction to Containerization feat Docker
@@ -227,4 +227,14 @@ services:
 volumes:
   db-data # you must list those volumes
 ```
-You can referene one volume for more than one containers
+You can referene one volume for more than one containers, if for example those containers need to share the same data!
+
+
+## Demo project: Docker volumes
+
+
+## Beyond Docker
+If you are curious about Containerization itself, here are some resources that might help you dig into that topic
+
+and you can also check my series articels about that topic:
+
