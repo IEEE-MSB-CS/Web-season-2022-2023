@@ -11,7 +11,7 @@ chroot allows you to
 
 follow along with me
 
-``````sh
+``sh
 $ docker run -it --name docker-host --rm --privileged ubuntu:bionic
 $ mkdir my-new-root
 $ cp bin/bash my-new-root/bin
@@ -19,10 +19,10 @@ $ ldd bin/bash
 $ mkdir my-new-root/lin{,64}
 $ cp <those_libs> my-new-root/lib and lib64
 $ chroot my-new-root bash
-``````
+```
 To see which libs does bash depends on
-````````
-```sh
+
+sh
 $ ldd bin/bash
 
 linux-vdso.so.1 (0x00007ffd55bfe000)
@@ -381,6 +381,67 @@ CMD ["node", "index.js"]
 ADD and COPY do the exact the same thing, but with one noticable difference? any body knows why??!
 
 ADD has additional features, like it can reach out to the network to download a file to destination and so on!
+
+now to see your WORKDIR
+```sh
+docker run --init --rm -publish 3000:3000 my-node-app pwd
+/home/node/code
+
+```
+
+### Making more complicated Container
+
+it's kind of best practice to run `npm ci` instead of 'npm install' inside a container
+
+```sh
+# we're using the demo of more-complicatd-node example
+$ touch Dockerfile
+```
+
+```Dockerfile
+FROM node:12-stretch
+
+USER node
+
+WORKDIR=/home/node/code
+
+COPY --chown=node:node . .
+
+RUN npm ci
+
+CMD ["node", "index.js"]
+```
+
+:red_circle: a note about EXPOSE:
+you can use EXPOSE in Dockerfile 
+
+```Dockerfile
+# AFTER RUN
+...
+EXPOSE 3000
+...
+```
+
+then you can use it like this, after building
+```sh
+docker run --init --rm -P my-node-app
+```
+
+Docker contaienrs is composed of layers, and docker "usually" do a cahing to those layers so everytime you build, it doesn't build those layers from scratch again
+
+
+`.dockerignore` is a file you put to ignore bunch of stuffs, like directories you don't want to be in there in the container e.g [node_modules, .git]
+
+
+```sh
+git init # to make .git directory
+touch .dockerignore
+
+# inside .dockerignore
+
+.git
+node_modules
+```
 ## Making tiny containers
 
 ## Features in Docker
