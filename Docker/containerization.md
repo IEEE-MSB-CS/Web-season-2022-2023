@@ -11,7 +11,11 @@ chroot allows you to
 
 follow along with me
 
+<<<<<<< HEAD
 ``sh
+=======
+```sh
+>>>>>>> e4d9c6435debe7356102ca32e331dde7b5f78033
 $ docker run -it --name docker-host --rm --privileged ubuntu:bionic
 $ mkdir my-new-root
 $ cp bin/bash my-new-root/bin
@@ -21,8 +25,12 @@ $ cp <those_libs> my-new-root/lib and lib64
 $ chroot my-new-root bash
 ```
 To see which libs does bash depends on
+<<<<<<< HEAD
 
 sh
+=======
+```sh
+>>>>>>> e4d9c6435debe7356102ca32e331dde7b5f78033
 $ ldd bin/bash
 
 linux-vdso.so.1 (0x00007ffd55bfe000)
