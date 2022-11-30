@@ -10,7 +10,7 @@ checkout our board <br/>
 ### Phase 1
 This phase focuses on leveraging the essential skills for any web developer (HTML, CSS, Basic Javascript)
 
-Week 1:
+<strong>Week 1: </strong></br>
 - [ ] HTML intro
 - [ ] HTML editors
  - [ ] HTML Basics (Syntax & style guide)
@@ -19,14 +19,14 @@ Week 1:
  - [ ] HTML Heading
  - [ ] HTML Formatting
  - [ ] HTML colors (inline CSS)
- H- [ ] TML Links
+ - [ ] HTML Links
  - [ ] HTML Blocks & inline
  - [ ] HTML Comments & Symbols
  - [ ] HTML tables
  - [ ] HTML images & file paths
  - [ ] CSS (inline, internal and external)
  - [ ] Demo 1[Float]
- Week 2:
+ <strong>Week 2: </strong></br>
  - [ ] Float (Layout)
  - [ ] CSS Syntax
  - [ ] CSS selector
@@ -38,9 +38,9 @@ Week 1:
  - [ ] Outline
  - [ ] Margin
  - [ ] Padding
- B- [ ] ox Model
+ - [ ] Box Model
  - [ ] Demo 2
-Week 3:
+<strong>Week 3: </strong></br>
  - [ ] Text
  - [ ] Fonts
  - [ ] Display
@@ -52,10 +52,10 @@ Week 3:
  - [ ] HTML Forms
  - [ ] HTML forms attributes
  - [ ] HTML inputs type
- H- [ ] TML inputs attributes
+ - [ ] HTML inputs attributes
  - [ ] Demo 3
-Week 4:
-R- [ ] ounded Corners
+<strong>Week 4: </strong></br>
+- [ ] Rounded Corners
  - [ ] Border Images
  - [ ] CSS backgrounds
  - [ ] Colors (RGBA , HSLA)
@@ -68,18 +68,18 @@ R- [ ] ounded Corners
  - [ ] Animation
  - [ ] Flex
  - [ ] Demo 4
-Week 5:
+<strong>Week 5: </strong></br>
  - [ ] Animate CSS, wow JS and font awesome
  - [ ] UI/UX concept
  - [ ] Intro to frameworks
- B- [ ] ootstrap installation (different between local and CDN)
- G- [ ] rid Bootstrap (3 to 5)
+ - [ ] Bootstrap installation (different between local and CDN)
+ - [ ] Grid Bootstrap (3 to 5)
  - [ ] Demo 5
-Week 6:
+<strong>Week 6: </strong></br>
  - [ ] Display bootstrap
- C- [ ] omplete Grid Bootstrap
+ - [ ] Complete Grid Bootstrap
  - [ ] Components Bootstrap
- D- [ ] emo 6
+ - [ ] Demo 6
 
 ### Phase 2 
 This phase focuses on javascript besides some advanced concepts
