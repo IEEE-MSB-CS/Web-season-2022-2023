@@ -152,6 +152,18 @@ Types of Events and Event Handlers
 - [ ] Lifecycle DOM Events
 - [ ] Efficient Script Loading: defer and async
 ### Phase 3
+
+This phase focuses on backend engineering fiels (Database, Containerization, server side programming)
+
+Week 1 (Node): </br>
+
+
+Week 2 (Continue Node): </br>
+
+Week 3 (Demo Project): </br>
+
+
+Week 4 (Containerization feat. Docker):</br>
 ## Contributors and team members
 
 
