@@ -8,10 +8,81 @@ checkout our board <br/>
 <a href="https://blue-temper-268.notion.site/IEEE-Web-Team-729110cfd90a45a8be5ccba0d2f6f59e">IEEE web board</a>
 
 ### Phase 1
+This phase focuses on leveraging the essential skills for any web developer (HTML, CSS, Basic Javascript)
 
+Week 1:
+- [ ] HTML intro
+- [ ] HTML editors
+ - [ ] HTML Basics (Syntax & style guide)
+ - [ ] HTML elements
+ - [ ] HTML Attributes
+ - [ ] HTML Heading
+ - [ ] HTML Formatting
+ - [ ] HTML colors (inline CSS)
+ H- [ ] TML Links
+ - [ ] HTML Blocks & inline
+ - [ ] HTML Comments & Symbols
+ - [ ] HTML tables
+ - [ ] HTML images & file paths
+ - [ ] CSS (inline, internal and external)
+ - [ ] Demo 1[Float]
+ Week 2:
+ - [ ] Float (Layout)
+ - [ ] CSS Syntax
+ - [ ] CSS selector
+ - [ ] Class & ID
+ - [ ] Comments
+ - [ ] Colors (names, RGB and HEX)
+ - [ ] Backgrounds
+ - [ ] Borders
+ - [ ] Outline
+ - [ ] Margin
+ - [ ] Padding
+ B- [ ] ox Model
+ - [ ] Demo 2
+Week 3:
+ - [ ] Text
+ - [ ] Fonts
+ - [ ] Display
+ - [ ] Position
+ - [ ] Combinators
+ - [ ] HTML Symantec
+ - [ ] HTML Audio & video
+ - [ ] SVG
+ - [ ] HTML Forms
+ - [ ] HTML forms attributes
+ - [ ] HTML inputs type
+ H- [ ] TML inputs attributes
+ - [ ] Demo 3
+Week 4:
+R- [ ] ounded Corners
+ - [ ] Border Images
+ - [ ] CSS backgrounds
+ - [ ] Colors (RGBA , HSLA)
+ - [ ] CSS Gradients
+ - [ ] Shadows
+ - [ ] Text effect
+ - [ ] 2D transform
+ - [ ] 3D transform
+ - [ ] Transition
+ - [ ] Animation
+ - [ ] Flex
+ - [ ] Demo 4
+Week 5:
+ - [ ] Animate CSS, wow JS and font awesome
+ - [ ] UI/UX concept
+ - [ ] Intro to frameworks
+ B- [ ] ootstrap installation (different between local and CDN)
+ G- [ ] rid Bootstrap (3 to 5)
+ - [ ] Demo 5
+Week 6:
+ - [ ] Display bootstrap
+ C- [ ] omplete Grid Bootstrap
+ - [ ] Components Bootstrap
+ D- [ ] emo 6
 
 ### Phase 2 
-This phase focus on javascript besides some advanced concepts
+This phase focuses on javascript besides some advanced concepts
 Hello World by js!
 
 <strong>Week 1 </strong> </br>
