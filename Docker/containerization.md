@@ -450,6 +450,148 @@ touch .dockerignore
 .git
 node_modules
 ```
+
+
+## Making tiny containers
+reasons for using alpine or any minimal linux distros?
+
+1. less vuls
+2. less storage 
+
+using alpine will make it much much light weight!
+
+
+```dockerfile
+FROM node:alpine
+..
+...
+```
+
+But we can make it more "much" lighter by using only alpine linux and installing nodejs ourselves
+
+```dockerfile
+FROM alpine:3.10
+
+RUN apk add --update nodejs npm
+RUN addgroup -S node && adduser -S node -G node
+USER node 
+
+RUN mkdir /home/node/code
+
+WORKDIR /home/node/code
+
+COPY --chown=node:node package-lock.json package.json
+RUN npm ci
+
+COPY --chown=node:node . .
+
+CMD ["node", "index.js"]
+```
+
+now build your container and run it, then inspect it
+```sh
+docker built -t my-alpine-node .
+docker run --init --rm -p3000:30000 my-alpine-node
+
+docker inspect my-alpine-node # notice the difference in Size?
+```
+
+we can even go lower "lighter"
+
+### Multi-stage Builds
+
+sometimes you don't want to send "toolchains" to production, because of "security vulns" somethings :"D
+
+:red_circle: :red_circle: in general this is not a good idea :"D 
+```dockerfile
+# Build Stage
+FROM node:12-stretch AS build
+WORKDIR /build
+COPY package-lock.json package.json ./
+RUN npm ci
+COPY . .
+
+# runtime stage
+FROM alpine:3.10
+RUN apk add --update nodejs npm
+RUN addgroup -S node && adduser -S node -G node
+USER node 
+
+RUN mkdir /home/node/code
+
+WORKDIR /home/node/code
+
+COPY --from=build --chown=node:node ./build .
+
+CMD ["node", "index.js"]
+```
+
+:red_circle: you can actually build a bunch of containers in a row.
+so you can say like, here's my dev container, here's my build container, you can build them all in on dockerfile and it'll export all of them for you 
+
+refer to Docker documentation for more about <a href="https://docs.docker.com/build/building/multi-stage/">Multi-stage build</a>
+
+
+#### Demo project (Static Assests) using multi-stage build 
+```sh
+npx --ignore-existing create-react-app static-assests-project --template typescript --use-npm 
+
+# change every css file to .scss then
+npm i node-sass
+npm run start # to check everything is working properly
+react-scripts build
+
+```
+
+now I need you to containerize this project into Nginx container
+using nginx:latest or nginx:alpine
+in usr/share/nginx/html
+
+:red_circle: do it yourself first, then comeback see the solution
+
+:red_circle: you don't need to specif y CMD because the nginx container has it's own CMD that will run automatically
+```dockerfile
+FROM node:12-stretch AS builder
+WORKDIR /app
+COPY . .
+RUN npm ci && npm run build
+
+FROM nginx:1.17
+COPY --from=builder /app/build /usr/share/nginx/html
+```
+
+```sh
+docker build -t static-app .
+docker run -p8080:80 static-app
+```
+
+now head over to <a href="localhost:8080">localhost:8080</a>
+
+
+
+## Features in Docker
+
+### Bind mounts
+To have some sort of storage persisent 
+> when containers get closed, they drop everything that thy had before
+
+search about "snowflake servers"
+
+there are about 5 different types of mounts, but our focus here on two main types ["bind", "volume"]
+
+we're binding the container point of storage on specfic folder on host computer, and anything that host changes ends up in the container, and anything that container changes ends up in the computer and so on, like a tunnel ['bounded']
+
+```sh
+
+cd static-assets-project
+docker run --mount type=bind,source="$(pwd)"/build,target=/usr/share/nginx/html -p 8080:80 nginx:1.17
+```
+
+so what actually does this line mean?
+
+Here we don't actually built a container, we've run it directlry from the command line, so how the Nginx container serve the project, it the project isn't found on a container?
+because we've bind mounted the build directory from 'our host computer' so then nginx container will go grap 
+### Volume mounts
 ## Making tiny containers
 
 ## Features in Docker
