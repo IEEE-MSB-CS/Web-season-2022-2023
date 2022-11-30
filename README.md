@@ -26,6 +26,8 @@ This phase focuses on leveraging the essential skills for any web developer (HTM
  - [ ] HTML images & file paths
  - [ ] CSS (inline, internal and external)
  - [ ] Demo 1[Float]
+
+
  <strong>Week 2: </strong></br>
  - [ ] Float (Layout)
  - [ ] CSS Syntax
@@ -40,6 +42,8 @@ This phase focuses on leveraging the essential skills for any web developer (HTM
  - [ ] Padding
  - [ ] Box Model
  - [ ] Demo 2
+ 
+ 
 <strong>Week 3: </strong></br>
  - [ ] Text
  - [ ] Fonts
@@ -54,6 +58,8 @@ This phase focuses on leveraging the essential skills for any web developer (HTM
  - [ ] HTML inputs type
  - [ ] HTML inputs attributes
  - [ ] Demo 3
+
+
 <strong>Week 4: </strong></br>
 - [ ] Rounded Corners
  - [ ] Border Images
@@ -68,6 +74,8 @@ This phase focuses on leveraging the essential skills for any web developer (HTM
  - [ ] Animation
  - [ ] Flex
  - [ ] Demo 4
+
+
 <strong>Week 5: </strong></br>
  - [ ] Animate CSS, wow JS and font awesome
  - [ ] UI/UX concept
@@ -75,6 +83,8 @@ This phase focuses on leveraging the essential skills for any web developer (HTM
  - [ ] Bootstrap installation (different between local and CDN)
  - [ ] Grid Bootstrap (3 to 5)
  - [ ] Demo 5
+
+
 <strong>Week 6: </strong></br>
  - [ ] Display bootstrap
  - [ ] Complete Grid Bootstrap
