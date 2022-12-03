@@ -1,11 +1,12 @@
 ## Table of Contents
+
 - [ ] This, call, bind, apply
 - [ ] Prototypical inheritance
 - [ ] Arrow functions
 - [ ] Call, Bind, Apply
-- [ ] Execution Context and it's phases
+- [x] Execution Context and it's phases
 - [ ] Closures
-- [ ] Scope chain
+- [x] Scope chain
 - [ ] Callbacks, Promises, Async await
 - [ ] Hoisting
 - [ ] Event Loop
@@ -13,21 +14,18 @@
 - [ ] Javascript Runtime
 - [ ] Interpreter, Compiler, JIT Compiler
 - [ ] Writing Optimized Code
-- [ ] Call Stack + Memory Heap
+- [x] Call Stack + Memory Heap
 - [ ] Stack Overflow + Memory Leaks
 - [ ] Garbage Collection
 - [ ] ES6, ES7, ES8, ES9 features
 - [ ] Single Threaded Model
-- [ ] Execution Context
 - [ ] Lexical Environment
-- [ ] Scope Chain
-- [ ] Hoisting
+- [x] Hoisting
 - [ ] Function Invocation
-- [ ] Function Scope vs Block Scope
+- [x] Function Scope vs Block Scope
 - [ ] Dynamic vs Lexical Scope
 - [ ] this – call(), apply(), bind()
 - [ ] IIFEs
-- [ ] Context vs Scope
 - [ ] Static vs Dynamically Typed
 - [ ] Primitive Types
 - [ ] Pass by Reference vs Pass by Value
