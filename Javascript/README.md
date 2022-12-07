@@ -1,31 +1,51 @@
-## Table of Contents
+# js-lib
 
-- [ ] This, call, bind, apply
-- [ ] Prototypical inheritance
-- [ ] Arrow functions
-- [ ] Call, Bind, Apply
-- [x] Execution Context and it's phases
-- [ ] Closures
-- [x] Scope chain
-- [ ] Callbacks, Promises, Async await
-- [ ] Hoisting
-- [ ] Event Loop
+JS concepts library.
+
+## Resources
+
+### Design Patterns and Solid Principles
+
+- [ ] Deep Dive into Design Patterns :book: (Discuss Solid Principles beside Design Patterns)
+- [ ] Head First Design Patterns
+
+### Functional Programming
+
+- [ ] Functional Programming in Js in action, manning pub :book:(I guess from my point of view, this is the best resource I've used)
+
+- [ ] <https://leanpub.com/javascriptallongesix/read#leanpub-auto-a-pull-of-the-lever-prefaces>
+
+### OOP
+
+- [ ] Javascript Object Oriented Programming, Nickolas Zakas :book: (Discess ES5 way of implementing object Oriented paradigm)
+- [ ] Javascript Patterns, Stoyan Stevanof
+
+### Fundmentals and More Advanced Techniques
+
+- [ ] You Don't Know JS :book: series, Kyle simpson
+- [ ] Secrets of JavaScript Ninja (contains a very good techniques for writing performant and clean js code)
+
+## Log
+
 - [ ] Javascript Engine
 - [ ] Javascript Runtime
 - [ ] Interpreter, Compiler, JIT Compiler
 - [ ] Writing Optimized Code
-- [x] Call Stack + Memory Heap
+- [ ] Call Stack + Memory Heap
 - [ ] Stack Overflow + Memory Leaks
 - [ ] Garbage Collection
 - [ ] ES6, ES7, ES8, ES9 features
 - [ ] Single Threaded Model
+- [ ] Execution Context
 - [ ] Lexical Environment
-- [x] Hoisting
+- [ ] Scope Chain
+- [ ] Hoisting
 - [ ] Function Invocation
-- [x] Function Scope vs Block Scope
+- [ ] Function Scope vs Block Scope
 - [ ] Dynamic vs Lexical Scope
 - [ ] this – call(), apply(), bind()
 - [ ] IIFEs
+- [ ] Context vs Scope
 - [ ] Static vs Dynamically Typed
 - [ ] Primitive Types
 - [ ] Pass by Reference vs Pass by Value
@@ -51,13 +71,10 @@
 - [ ] Pipe
 - [ ] Error Handling
 - [ ] Asynchronous JavaScript
-- [ ] Callbacks, Promises, AsyncAwait
+- [ ] Callbacks, Promises, Async/Await
 - [ ] Event Loop + Callback Queue
 - [ ] Task Queue + Microtask Queue
 - [ ] Concurrency + Parallelism
 - [ ] Modules in Javascript
 - [ ] Throttling and Debouncing
 - [ ] Iterables
-- [ ] Create Your Own Arrays
-
-## Resources
