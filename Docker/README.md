@@ -16,6 +16,7 @@
 12. Create private docker repository on nexus
 13. push/fetch from repo
 14. Beyond Docker: Containerization in practice!
+
 ## Resources
 
 - Frontendmasters - complete introduction to Containerization feat Docker
@@ -159,11 +160,13 @@ docker-compose -f mongo.yaml down # this will remove the network and next time u
 ⛔ recreating a container => data lost, we can have data persistency with Docker volumes
 
 ## Building Images with Dockerfile
+
 A blueprint for creating docker images
 FROM `image` => basing it on another image
 RUN `any linux command` to be applied on the container enviroment
 COPY `any linux command` to be applied from host to a container
 CMD = entrypoint command
+
 ```dockerfile
 FROM node:13-alpine
 ENV MONGO_DB_USERNAME=admin \
@@ -175,6 +178,7 @@ CMD ["node", "server.js"] # cmd command
 ```
 
 To actually build
+
 ```sh
 docker build -t my-app:1.0 . # (.) for current folder which contains Dockerfile
 ```
@@ -187,24 +191,27 @@ docker rmi <image_name> # my-app:1.0 here
 ```
 
 ## Docker Volumes
-- When do we need Docker volumes?
 
+- When do we need Docker volumes?
 
 Virutal File Systems
 
-Host File system 
-Folder in physical host file system is *mounted* into virual file system of Docker
+Host File system
+Folder in physical host file system is _mounted_ into virual file system of Docker
 
 Data gets automatically replicated from/to virtual and host
 <insert image>
 
 ### 3 volumes types
+
 using Docker run command:
 Host Volumes
 anonymous volumes
 named volumes: you can reference the volume by name
+
 1. `docker run -v <host_dir>:<vf_dir>`
 for example
+
 ```sh
 docker run -v /home/mount/data:/var/lib/mysql/data
 ```
@@ -213,9 +220,10 @@ docker run -v /home/mount/data:/var/lib/mysql/data
 and Dockre automaticallyfor each container create/generate a folder that gets mounted e.g `/var/lib/docker/volumes/random-hash/_data`
 3. `docker run -v name:/var/lib/mysql/data`
 
-* named volumes is commonly used on production
+- named volumes is commonly used on production
 
 using Docker compose
+
 ```yaml
 version:
 services:
@@ -227,14 +235,13 @@ services:
 volumes:
   db-data # you must list those volumes
 ```
-You can referene one volume for more than one containers, if for example those containers need to share the same data!
 
+You can referene one volume for more than one containers, if for example those containers need to share the same data!
 
 ## Demo project: Docker volumes
 
-
 ## Beyond Docker
+
 If you are curious about Containerization itself, here are some resources that might help you dig into that topic
 
 and you can also check my series articels about that topic:
-

@@ -1,6 +1,7 @@
 # What's in there?
 
-## 
+##
+
 - [ ] dockerfile [Demo of using dockerfile]
 - [ ] build-a-node-app [Demo of building simple containerized nodejs application]
 - [ ] more-complicated-node [Demo of building complex nodejs containereized app with depends]
