@@ -130,7 +130,7 @@ a structured way to contain very normal docker commands
 💯Docker compose takes care of creating a common network  
 by creating a default network group
 
-:small_red_triangle: you can acutally configure docker-compose file to a logical processing order of spinning off containers!
+:small_red_triangle: you can actually configure the docker-compose file to a logical processing order of spinning off containers!
 
 ```yaml
 version: '3'
@@ -217,7 +217,7 @@ docker run -v /home/mount/data:/var/lib/mysql/data
 ```
 
 2. `docker run -v <only_vf_dir>`
-and Dockre automaticallyfor each container create/generate a folder that gets mounted e.g `/var/lib/docker/volumes/random-hash/_data`
+and Dockre automatically for each container create/generate a folder that gets mounted e.g `/var/lib/docker/volumes/random-hash/_data`
 3. `docker run -v name:/var/lib/mysql/data`
 
 - named volumes is commonly used on production

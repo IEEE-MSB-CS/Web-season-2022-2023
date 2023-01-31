@@ -1,7 +1,5 @@
 # What's in there?
 
-##
-
 - [ ] dockerfile [Demo of using dockerfile]
 - [ ] build-a-node-app [Demo of building simple containerized nodejs application]
 - [ ] more-complicated-node [Demo of building complex nodejs containereized app with depends]
@@ -11,3 +9,7 @@
 - [ ] hugo-example [demo of demonstrating what "developement containers" means!]
 - [ ] static-assets-project [demo of using multi-stage build & binding mount]
 - [ ] volumes [Demo of using volumes]
+
+- [ ] tasks:
+  - [ ] Dockerize a go application
+  - [ ] Dockersize a fullstack application
