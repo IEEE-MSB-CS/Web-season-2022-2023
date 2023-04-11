@@ -164,9 +164,8 @@ Types of Events and Event Handlers
 ### Phase 3
 
 This phase focuses on backend engineering fiels (Database, Containerization, server side programming)
-
+We're following <a href="https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs">Oding project plan</a>
 Week 1 (Node): </br>
-
 
 Week 2 (Continue Node): </br>
 
